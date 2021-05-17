@@ -18,6 +18,7 @@ mockjs.Random.extend({
 });
 
 export default (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.statusCode = 200
     res.json(mockjs.mock({
         'list|16': [
